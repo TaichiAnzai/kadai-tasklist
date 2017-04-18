@@ -2,7 +2,7 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.id %> : <%= link_to task.content, task %></li>
+    <li><%= task.id %> : <%= link_to task.content, task %> , 投稿日時：<%= task.created_at %> , 最終更新日時：<%= task.updated_at %></li>
   <% end %>
 </ul>
 
