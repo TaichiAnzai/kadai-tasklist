@@ -54,3 +54,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #ページネーションの追加
 gem 'kaminari'
+
+#PostgreSQLの追加
+group :production do
+  gem 'pg'
+end
