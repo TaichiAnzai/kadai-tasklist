@@ -1,0 +1,28 @@
+<% if @tasks.any? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>タスク</td>
+        <td>状態</td>
+        <td>投稿日時</td>
+        <td>最終更新日時</td>
+      </tr>
+    </thead>
+    <tboby>
+      <% @tasks.each do |task| %>
+        <% user = task.user %>
+        <tr>
+          <td><%= task.id %></td>
+          <td><%= link_to task.content, task %></td>
+          <td><%= task.status %></td>
+          <td><%= task.created_at %></td>
+          <td><%= task.updated_at %></td>
+        </tr>
+      <% end %>
+    </tboby>
+  </table>
+  <div>
+    <%= paginate @tasks %>
+  </div>
+<% end %>
